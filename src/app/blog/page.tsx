@@ -54,6 +54,7 @@ export default function BlogPage() {
                src={featured.image}
                alt={featured.title}
                fill
+               sizes="(max-width: 768px) 100vw, 80vw"
                className="object-cover opacity-80"
               />
               <span className="absolute top-4 left-4 px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-bold rounded-full">
@@ -103,6 +104,7 @@ export default function BlogPage() {
                  src={post.thumbnail}
                  alt={post.title}
                  fill
+                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                  className="object-cover"
                  loading="lazy"
                 />
