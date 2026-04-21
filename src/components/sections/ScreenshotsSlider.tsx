@@ -25,7 +25,7 @@ export function ScreenshotsSlider() {
   }, [active, go]);
 
   return (
-    <section className="py-16 bg-gray-900">
+    <section className="py-16 bg-gray-900 overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -39,13 +39,14 @@ export function ScreenshotsSlider() {
         </div>
 
         {/* Main image — full, no crop */}
-        <div className="relative rounded-2xl overflow-hidden border-2 border-green-700/40 shadow-2xl shadow-black/50 bg-black">
+        <div className="relative w-full rounded-2xl overflow-hidden border-2 border-green-700/40 shadow-2xl shadow-black/50 bg-black">
           <Image
             key={slides[active].src}
             src={slides[active].src}
             alt={`Teen Patti Boss – ${slides[active].label}`}
             width={1440}
             height={665}
+            sizes="(max-width: 768px) 100vw, 80vw"
             className="w-full h-auto block"
             priority
           />
@@ -58,45 +59,47 @@ export function ScreenshotsSlider() {
           {/* Prev arrow */}
           <button
             onClick={() => go(active - 1)}
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-white hover:bg-green-900/60 transition-colors"
+            className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-white hover:bg-green-900/60 transition-colors"
             aria-label="Previous"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
 
           {/* Next arrow */}
           <button
             onClick={() => go(active + 1)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-white hover:bg-green-900/60 transition-colors"
+            className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-black/50 backdrop-blur-sm border border-white/20 text-white hover:bg-green-900/60 transition-colors"
             aria-label="Next"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
 
-        {/* Thumbnail strip */}
-        <div className="flex gap-3 mt-4 justify-center">
-          {slides.map((slide, i) => (
-            <button
-              key={slide.src}
-              onClick={() => go(i)}
-              className={`relative flex-shrink-0 rounded-xl overflow-hidden border-2 transition-all duration-300 focus:outline-none ${
-                i === active
-                  ? "border-green-500 opacity-100 shadow-md shadow-green-900/40"
-                  : "border-gray-700 opacity-50 hover:opacity-80"
-              }`}
-              style={{ width: 100, height: 48 }}
-              aria-label={slide.label}
-            >
-              <Image
-                src={slide.src}
-                alt={slide.label}
-                fill
-                className="object-cover"
-                sizes="100px"
-              />
-            </button>
-          ))}
+        {/* Thumbnail strip — horizontally scrollable on mobile */}
+        <div className="mt-4 overflow-x-auto scrollbar-none">
+          <div className="flex gap-2 sm:gap-3 justify-start sm:justify-center w-max sm:w-full mx-auto px-1">
+            {slides.map((slide, i) => (
+              <button
+                key={slide.src}
+                onClick={() => go(i)}
+                className={`relative flex-shrink-0 rounded-lg sm:rounded-xl overflow-hidden border-2 transition-all duration-300 focus:outline-none ${
+                  i === active
+                    ? "border-green-500 opacity-100 shadow-md shadow-green-900/40"
+                    : "border-gray-700 opacity-50 hover:opacity-80"
+                }`}
+                style={{ width: 72, height: 34 }}
+                aria-label={slide.label}
+              >
+                <Image
+                  src={slide.src}
+                  alt={slide.label}
+                  fill
+                  className="object-cover"
+                  sizes="72px"
+                />
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Dot indicators */}
