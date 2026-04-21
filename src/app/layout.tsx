@@ -86,7 +86,7 @@ export default function RootLayout({
  children: React.ReactNode;
 }) {
  return (
-    <html lang="en" className={`${inter.variable} dark`} data-scroll-behavior="smooth">
+    <html lang="en" className={`${inter.variable} ${inter.className} dark`} data-scroll-behavior="smooth">
       <head>
         <OrganizationSchema />
         <WebsiteSchema />

@@ -285,7 +285,7 @@ export default async function BlogPostPage({
                className="group block bg-gray-900 rounded-2xl border border-green-900/30 overflow-hidden hover:shadow-md transition-all duration-200"
               >
                 <div className="relative h-32 bg-gradient-to-br from-[#021a0c] to-[#0a3520]">
-                  <Image src={relPost.thumbnail} alt={relPost.title} fill className="object-cover" loading="lazy" />
+                  <Image src={relPost.thumbnail} alt={relPost.title} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" loading="lazy" />
                 </div>
                 <div className="p-4">
                   <h3 className="text-xs font-bold text-white group-hover:text-green-400 transition-colors line-clamp-2 leading-snug">
