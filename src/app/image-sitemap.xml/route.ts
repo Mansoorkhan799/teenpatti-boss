@@ -68,15 +68,24 @@ const imageEntries = [
   },
 ];
 
+function escapeXml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
 export function GET() {
   const urlEntries = imageEntries
     .map(({ pageUrl, images }) => {
       const imageXml = images
         .map(
           ({ loc, title, caption }) => `    <image:image>
-      <image:loc>${loc}</image:loc>
-      <image:title>${title}</image:title>
-      <image:caption>${caption}</image:caption>
+      <image:loc>${escapeXml(loc)}</image:loc>
+      <image:title>${escapeXml(title)}</image:title>
+      <image:caption>${escapeXml(caption)}</image:caption>
     </image:image>`
         )
         .join("\n");
