@@ -78,9 +78,8 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               {[
                 { href: "/blog", label: "Blog" },
-                { href: "/blog", label: "Blog" },
-                { href: "/about", label: "About Us" },
-                { href: "/contact", label: "Contact" },
+                { href: "/about-teen-patti-boss", label: "About Us" },
+                { href: "/contact-teen-patti-boss", label: "Contact" },
                 { href: "/disclaimer", label: "Disclaimer" },
                 { href: "/privacy-policy", label: "Privacy Policy" },
               ].map((link) => (

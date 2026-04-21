@@ -48,8 +48,8 @@ const menuSections = [
   {
     title: "INFO",
     items: [
-      { href: "/about", label: "About", icon: Info },
-      { href: "/contact", label: "Contact", icon: Phone },
+      { href: "/about-teen-patti-boss", label: "About", icon: Info },
+      { href: "/contact-teen-patti-boss", label: "Contact", icon: Phone },
       { href: "/privacy-policy", label: "Privacy Policy", icon: Lock },
       { href: "/disclaimer", label: "Disclaimer", icon: AlertTriangle },
     ],
