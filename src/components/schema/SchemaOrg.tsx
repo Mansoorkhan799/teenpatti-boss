@@ -66,7 +66,7 @@ export function SoftwareAppSchema() {
    aggregateRating: {
       "@type": "AggregateRating",
      ratingValue: parseFloat(siteConfig.rating),
-     ratingCount: parseInt(siteConfig.ratingCount.replace(/[^0-9]/g, ""), 10),
+     ratingCount: siteConfig.ratingCount,
      bestRating: 5,
      worstRating: 1,
     },

@@ -13,7 +13,7 @@ export function AppDetailsCard() {
     { label: "Payment Methods", value: siteConfig.paymentMethods.join(", ") },
     { label: "Minimum Deposit", value: siteConfig.minDeposit },
     { label: "Downloads", value: siteConfig.downloads },
-    { label: "Rating", value: `★ ${siteConfig.rating}/5 (${siteConfig.ratingCount} ratings)` },
+    { label: "Rating", value: `★ ${siteConfig.rating}/5 (${siteConfig.ratingCount.toLocaleString()}+ ratings)` },
     { label: "Official Website", value: siteConfig.officialSite },
   ];
 

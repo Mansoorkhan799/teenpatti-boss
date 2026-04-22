@@ -40,7 +40,7 @@ export function ReviewsSection() {
         <div className="mt-10 bg-gray-900 rounded-2xl border border-green-900/30 p-6 text-center shadow-sm">
           <div className="text-5xl font-black text-white mb-2">{siteConfig.rating}</div>
           <StarRating rating={parseFloat(siteConfig.rating)} />
-          <div className="mt-2 text-sm text-gray-500 ">Based on {siteConfig.ratingCount} ratings</div>
+          <div className="mt-2 text-sm text-gray-500 ">Based on {siteConfig.ratingCount.toLocaleString()}+ ratings</div>
         </div>
       </div>
     </section>

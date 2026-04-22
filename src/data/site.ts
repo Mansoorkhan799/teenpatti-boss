@@ -16,7 +16,7 @@ export const siteConfig = {
   paymentMethods: ["JazzCash", "Easypaisa", "Bank Transfer"],
   minDeposit: "Rs. 100",
   downloads: "100,000+",
-  ratingCount: "50,000+",
+  ratingCount: 50000,
   rating: "4.5",
   downloadLink: "https://3pattiboss.in/?from_gameid=4407269&channelCode=2949560",
   welcomeBonus: "Rs. 111",
