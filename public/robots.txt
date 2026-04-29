@@ -28,7 +28,6 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /_next/
 Disallow: /admin/
 
 # Priority pages
@@ -121,9 +120,7 @@ Allow: /
 # SITEMAPS
 # ============================================
 
-Sitemap: https://teenpattibossgame.com.pk/sitemap-index.xml
 Sitemap: https://teenpattibossgame.com.pk/sitemap.xml
-Sitemap: https://teenpattibossgame.com.pk/image-sitemap.xml
 
 # ============================================
 # IMPORTANT: DO NOT ADD Host DIRECTIVE
