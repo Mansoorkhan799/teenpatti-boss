@@ -29,7 +29,7 @@ export function WebsiteSchema() {
  const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-   name: "Teen Patti Boss APK Download Pakistan",
+   name: siteConfig.openGraphSiteName,
    url: siteConfig.siteUrl,
    description: siteConfig.description,
    inLanguage: ["en", "ur"],
@@ -211,7 +211,7 @@ export function ArticleSchema({
    isPartOf: {
       "@type": "WebSite",
      url: siteConfig.siteUrl,
-     name: "Teen Patti Boss APK Download Pakistan",
+     name: siteConfig.openGraphSiteName,
     },
   };
 

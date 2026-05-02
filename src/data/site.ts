@@ -1,5 +1,11 @@
 export const siteConfig = {
   name: "Teen Patti Boss",
+  /** Default `<title>` for the homepage and root metadata fallback */
+  defaultMetaTitle: "Teen Patti Boss Pakistan | Free Download Official APK",
+  /** Suffix for inner pages: `PageName | Teen Patti Boss Pakistan` */
+  metaTitleTemplate: "%s | Teen Patti Boss Pakistan",
+  /** Open Graph `site_name` and shared brand label */
+  openGraphSiteName: "Teen Patti Boss Pakistan",
   tagline: "Pakistan's #1 Real Money Card Game App",
   domain: "teenpattibossgame.com.pk",
   siteUrl: "https://teenpattibossgame.com.pk",

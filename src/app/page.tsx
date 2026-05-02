@@ -21,7 +21,7 @@ import {
 } from "@/components/schema/SchemaOrg";
 import { siteConfig } from "@/data/site";
 export const metadata: Metadata = {
- title: `Teen Patti Boss APK Download Pakistan | Latest ${siteConfig.version} Free for Android (2026)`,
+ title: siteConfig.defaultMetaTitle,
  description:
     "Download Teen Patti Boss APK v1.27 free for Android in Pakistan. Play 25+ real money games — Teen Patti, Rummy, Poker. Earn via JazzCash & Easypaisa. Rs. 111 welcome bonus.",
  alternates: {

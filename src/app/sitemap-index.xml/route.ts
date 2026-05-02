@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
+import { siteConfig } from "@/data/site";
 
 export const dynamic = "force-dynamic";
 
 export function GET() {
-  const baseUrl = "https://teenpattibossgame.com.pk";
+  const baseUrl = siteConfig.siteUrl;
   const lastmod = new Date().toISOString().split("T")[0];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

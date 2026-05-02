@@ -16,8 +16,8 @@ const inter = Inter({
 export const metadata: Metadata = {
  metadataBase: new URL(siteConfig.siteUrl),
  title: {
-   default: `Teen Patti Boss APK Download Pakistan | Latest ${siteConfig.version} Free for Android (2026)`,
-   template: `%s | Teen Patti Boss APK Download Pakistan`,
+   default: siteConfig.defaultMetaTitle,
+   template: siteConfig.metaTitleTemplate,
   },
  description: siteConfig.description,
  keywords: [
@@ -49,23 +49,23 @@ export const metadata: Metadata = {
    type: "website",
    locale: "en_PK",
    url: siteConfig.siteUrl,
-   siteName: "Teen Patti Boss APK Download Pakistan",
-   title: `Teen Patti Boss APK Download Pakistan | Latest ${siteConfig.version} Free for Android`,
+   siteName: siteConfig.openGraphSiteName,
+   title: siteConfig.defaultMetaTitle,
    description: siteConfig.description,
    images: [
       {
-       url: "/images/og-image.jpg",
+       url: siteConfig.images.ogImage,
        width: 1200,
        height: 630,
-       alt: "Teen Patti Boss APK Download Pakistan",
+       alt: siteConfig.openGraphSiteName,
       },
     ],
   },
  twitter: {
    card: "summary_large_image",
-   title: `Teen Patti Boss APK Download Pakistan | ${siteConfig.version}`,
+   title: siteConfig.defaultMetaTitle,
    description: siteConfig.description,
-   images: ["/images/og-image.jpg"],
+   images: [siteConfig.images.ogImage],
   },
  icons: {
    icon: "/images/teen-patti-boss.ico",

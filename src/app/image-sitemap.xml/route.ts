@@ -1,18 +1,27 @@
 import { NextResponse } from "next/server";
+import { blogPosts, siteConfig } from "@/data/site";
 
 export const dynamic = "force-dynamic";
 
-const baseUrl = "https://teenpattibossgame.com.pk";
+const baseUrl = siteConfig.siteUrl;
 
-const imageEntries = [
+const staticPageImages: {
+  pageUrl: string;
+  images: { loc: string; title: string; caption: string }[];
+}[] = [
   {
     pageUrl: `${baseUrl}/`,
     images: [
       {
-        loc: `${baseUrl}/images/teen-patti-boss.webp`,
-        title: "Teen Patti Boss APK Download Pakistan",
-        caption: "Teen Patti Boss – Pakistan's #1 Real Money Card Game App",
+        loc: `${baseUrl}${siteConfig.images.hero}`,
+        title: siteConfig.openGraphSiteName,
+        caption: siteConfig.tagline,
       },
+      ...siteConfig.images.screenshots.map((s) => ({
+        loc: `${baseUrl}${s.src}`,
+        title: `${siteConfig.name} — ${s.label}`,
+        caption: `${s.label} screenshot — ${siteConfig.openGraphSiteName}`,
+      })),
     ],
   },
   {
@@ -67,6 +76,17 @@ const imageEntries = [
   },
 ];
 
+const blogImageEntries = blogPosts.map((post) => ({
+  pageUrl: `${baseUrl}/blog/${post.slug}`,
+  images: [
+    {
+      loc: `${baseUrl}${post.image}`,
+      title: post.title,
+      caption: post.excerpt,
+    },
+  ],
+}));
+
 function escapeXml(str: string): string {
   return str
     .replace(/&/g, "&amp;")
@@ -77,7 +97,9 @@ function escapeXml(str: string): string {
 }
 
 export function GET() {
-  const urlEntries = imageEntries
+  const allEntries = [...staticPageImages, ...blogImageEntries];
+
+  const urlEntries = allEntries
     .map(({ pageUrl, images }) => {
       const imageXml = images
         .map(
