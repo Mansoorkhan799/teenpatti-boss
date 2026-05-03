@@ -14,7 +14,6 @@ const blogDropdownItems = [
   { href: "/blog", label: "All Posts", icon: BookOpen },
   { href: "/blog/teen-patti-boss-review-2026", label: "Review 2026", icon: PenLine },
   { href: "/blog/how-to-earn-money-teen-patti-boss", label: "Earn Money Guide", icon: DollarSign },
-  { href: "/blog/teen-patti-boss-withdrawal-guide", label: "Withdrawal Guide", icon: Wallet },
   { href: "/blog/teen-patti-boss-referral-code-guide", label: "Referral Code Guide", icon: PenLine },
   { href: "/blog/how-to-claim-teen-patti-boss-111-bonus", label: "Claim Rs. 111 Bonus", icon: PenLine },
 ];
@@ -22,7 +21,7 @@ const blogDropdownItems = [
 const accountDropdownItems = [
   { href: "/how-to-register-on-teen-patti-boss", label: "Register", icon: UserPlus },
   { href: "/how-to-login-teen-patti-boss", label: "Login", icon: LogIn },
-  { href: "/blog/teen-patti-boss-withdrawal-guide", label: "Deposit", icon: CreditCard },
+  { href: "/how-to-earn-money-on-teen-patti-boss", label: "Deposit", icon: CreditCard },
   { href: "/teen-patti-boss-withdrawal-proof", label: "Withdraw", icon: Banknote },
 ];
 
@@ -41,7 +40,6 @@ const menuSections = [
       { href: "/how-to-earn-money-on-teen-patti-boss", label: "Earn Money", icon: DollarSign },
       { href: "/is-teen-patti-boss-real-or-fake", label: "Is It Real?", icon: ShieldCheck },
       { href: "/teen-patti-boss-withdrawal-proof", label: "Withdrawal Proof", icon: Wallet },
-      { href: "/blog/teen-patti-boss-withdrawal-guide", label: "Deposit Guide", icon: CreditCard },
       { href: "/blog", label: "Blog", icon: BookOpen },
     ],
   },

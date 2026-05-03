@@ -530,21 +530,6 @@ export const blogPosts = [
     tags: ["Earning", "Tips", "Strategy", "Pakistan"],
   },
   {
-    slug: "teen-patti-boss-withdrawal-guide",
-    title: "3 Patti Boss Withdrawal Guide: JazzCash & Easypaisa (2026)",
-    excerpt:
-      "Step-by-step guide to withdrawing money from 3 Patti Boss via JazzCash and Easypaisa. Fix common withdrawal issues and get your money fast.",
-    content: "full",
-    category: "Guide",
-    readTime: "6 min read",
-    date: "2026-04-10",
-    dateModified: "2026-04-19",
-    image: "/images/teen-patti-boss-withdraw-money.webp",
-    thumbnail: "/images/teen-patti-boss-withdraw-money.webp",
-    primaryKeyword: "3 Patti Boss withdrawal JazzCash",
-    tags: ["Withdrawal", "JazzCash", "Easypaisa", "Guide"],
-  },
-  {
     slug: "teen-patti-boss-referral-program",
     title: "3 Patti Boss Referral Program: Earn Up to 30% Commission",
     excerpt:
